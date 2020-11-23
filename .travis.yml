@@ -57,10 +57,10 @@ jobs:
         # push image to Docker Hub
         - docker push gymnasteg2019/backend:prod
 
-    - stage: "Upgrade rancher service"
-      name: "Upgrade rancher service"
-      if: branch = develop || branch = master
-      script: python ./scripts/upgrade_service.py
+#     - stage: "Upgrade rancher service"
+#       name: "Upgrade rancher service"
+#       if: branch = develop || branch = master
+#       script: python ./scripts/upgrade_service.py
 
 after_script:
 #   - docker-compose down
