@@ -19,4 +19,4 @@ RUN yarn install
 
 EXPOSE 3333
 
-CMD ["npm", "dev"]
+# CMD ["npm", "dev"]
