@@ -30,12 +30,12 @@ before_install:
 
 jobs:
   include:
-    - stage: "Tests"
-      name: "Tests"
-      script:
-        # run lint and tests
-        - yarn run test -u --coverage
-        - ./node_modules/.bin/codecov -t ${CODECOV_API_TOKEN}
+#     - stage: "Tests"
+#       name: "Tests"
+#       script:
+#         # run lint and tests
+#         - yarn run test -u --coverage
+#         - ./node_modules/.bin/codecov -t ${CODECOV_API_TOKEN}
 
     - stage: "Deploy docker image stage"
       name: "Deploy docker image stage"
