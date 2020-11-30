@@ -11,6 +11,8 @@ import AuthMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 
+routes.get('/', (req, res) => res.json({ message: 'Hello World!!!' }));
+
 routes.get('/modalities', ModalityController.index);
 routes.get('/modalities/:id', ModalityController.show);
 routes.post('/modalities', ModalityController.store);
