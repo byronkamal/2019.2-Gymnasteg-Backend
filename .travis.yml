@@ -58,7 +58,7 @@ jobs:
 
     - stage: 'Upgrade rancher service'
       name: 'Upgrade rancher service'
-      if: branch = devel || branch = master
+      if: (NOT type IN (pull_request)) AND (branch = master || branch = devel)
       script: python ./scripts/upgrade_service.py
 
 after_script:
